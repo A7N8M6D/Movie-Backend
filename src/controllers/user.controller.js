@@ -75,8 +75,10 @@ const loginUser = async (req, res) => {
     );
     // Set cookies with options
     const options = {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      httpOnly: true, // Helps prevent XSS attacks
+      secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+      maxAge: 3600000, // Cookie expiration in milliseconds (1 hour)
+      sameSite: 'Strict', // Adjust this based on your needs
     };
 
     return res
