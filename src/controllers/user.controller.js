@@ -76,7 +76,9 @@ const loginUser = async (req, res) => {
     // Set cookies with options
     const options = {
       httpOnly: true,
-      secure: true
+      secure: true, // Only for HTTPS
+      sameSite: 'None', // Required for cross-origin cookies
+      path: '/',
   }
 
     return res
