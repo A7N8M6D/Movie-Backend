@@ -10,8 +10,7 @@ const movieSchema=new Schema(
       },
       category:
       {
-        type:String,
-        require:true
+        type:String
       },
       Imagesrc:{
         type:String
