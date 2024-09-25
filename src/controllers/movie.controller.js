@@ -11,7 +11,7 @@ const createDetailmovie = async (req, res) => {
   const { Title, Date, category } = req.body;
   const user = req.user._id;
   console.log(`Title ${Title} Date ${Date} Category ${category}`);
-  if ([Title, category].some((field) => field?.trim() === "")) {
+  if ([Title].some((field) => field?.trim() === "")) {
     return res.status(400).json({ error: "All fields are required" });
   }
   if(!Date)
