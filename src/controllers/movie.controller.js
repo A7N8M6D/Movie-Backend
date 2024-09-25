@@ -18,7 +18,8 @@ const createDetailmovie = async (req, res) => {
   {
     return res.status(400).json({ error: " Date is required" }); 
   }
-  const existedTitle = await Movie.findOne({ $or: [{ Title }] });
+  const existedTitle = await Movie.findOne({ Title });
+
   if (existedTitle) {
     return res.status(400).json({ error: `Title already Exist` });
   }
