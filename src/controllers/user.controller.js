@@ -74,9 +74,9 @@ const loginUser = async (req, res) => {
       "-password -refreshToken"
     );
     // Set cookies with options
+    // httpOnly: true,
+    // secure: true, // Only for HTTPS
     const options = {
-      
-      secure: true, // Only for HTTPS
       sameSite: 'None', // Required for cross-origin cookies
       path: '/',
   }
