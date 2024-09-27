@@ -5,7 +5,7 @@ import { limit } from "./utils/constants.js";
 const app=express();
 
 app.use(cors({
-    origin:"https://movie-backend-flame.vercel.app",
+    origin:"https://movie-app-dusky-eight.vercel.app",
     credentials:true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }))
